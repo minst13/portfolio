@@ -1,0 +1,368 @@
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(background.svg);
+    background-size: cover;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+.header {
+    width: 100%;
+    height: 40vh;
+}
+
+.nav-container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nav-container h1 {
+    width: 50px;
+    display: none;
+}
+
+.nav-container ul li {
+    list-style: none;
+    margin: 10px 20px;
+    display: inline-block;
+}
+
+.nav-container ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    position: relative;
+}
+
+
+.nav-container ul li a::after {
+    content: '';
+    width: 0;
+    height: 5px;
+    background: linear-gradient(-45deg, #f9c901, #f6e000, #985b10, #6b4701);
+    background-size: 100% 100%;
+    position: absolute;
+    transition: 0.5s;
+    left: 0;
+    bottom: -10px;
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+.nav-container ul li a:hover::after {
+    width: 100%;
+
+}
+
+.headerTxt {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.headerTxt h2 {
+    font-size: 4rem;
+    margin-top: 10px;
+}
+
+.headerTxt h2 span {
+    color: aqua;
+}
+
+/* About */
+
+.about {
+    padding: 80px 0;
+    color: #342a23;
+}
+
+.about .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-column-1 {
+    flex-basis: 35%;
+}
+
+.about-column-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-column-2 {
+    flex-basis: 60%;
+}
+
+#aboutme {
+    font-weight: 600;
+    font-size: 5rem;
+}
+
+.tabs {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 50px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 5px;
+    background: linear-gradient(-45deg, #f9c901, #f6e000, #985b10, #6b4701);
+    position: absolute;
+    transition: 0.5s;
+    left: 0;
+    bottom: -10px;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+.tab-links.active-tab::after {
+    width: 50%;
+}
+
+.tabContents {
+    display: none;
+    /* Initially hide all tab contents */
+}
+
+.tabContents.active-Content {
+    display: block;
+    /* Show active content */
+}
+
+.tabContents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tabContents ul li span {
+    color: firebrick;
+    font-size: 1.5rem;
+}
+
+/* Skills page */
+.skills {
+    padding: 30px 0;
+    border-style: inset;
+    height: 80vh;
+}
+
+.skills .sub-tittle {
+    text-align: center;
+    font-weight: 500;
+    font-size: 4rem;
+}
+
+.languages {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-self: right;
+    align-self: center;
+}
+
+.languages div {
+    transition: background 0.5s, transform 0.5;
+}
+
+
+.grid {
+    grid-column: span 6;
+    padding: 10px 20px;
+}
+
+.grid i {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+.grid h2 {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.languages div:hover {
+    transform: translateY(-10px);
+
+}
+
+/* Projects */
+.projects {
+    padding: 50px 0;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-self: right;
+    align-self: center;
+}
+
+.project-list .project {
+    position: relative;
+    grid-column: span 4;
+    margin: 30px 50px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.project img {
+    border-radius: 20px;
+    display: block;
+    transition: transoform 0.5s;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.layer {
+    width: fit-content;
+    height: 0;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #885053a4, #c5e0d898, #f9b5ac96);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    transition: height 0.5s;
+}
+
+.project:hover .layer {
+    height: 100%;
+}
+
+
+.layer h3 {
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #8E443D;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+.button {
+    text-decoration: none;
+    font-weight: 400;
+    display: block;
+    color: #111;
+    width: fit-content;
+    border-radius: 10px;
+    margin: 50px auto;
+    overflow: hidden;
+    padding: 20px 30px;
+    background: #6b4701;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background: linear-gradient(-45deg, #f9c901, #f6e000, #985b10, #6b4701);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+/* contact */
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-left p {
+    margin-top: 50px;
+}
+
+.socials {
+    margin-top: 50px;
+}
+
+.socials a {
+    text-decoration: none;
+    font-size: 2rem;
+    margin-right: 20px;
+    color: #1b0542;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.socials a:hover {
+    color: #992b6f;
+    transform: translateY(-5px);
+}
+
+.button.button-2 {
+    margin: 50px 0;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0x;
+    font-weight: 400;
+    background: #c5e0d898;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
