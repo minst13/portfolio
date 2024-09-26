@@ -3,10 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #fff;
 }
 
 body {
-    background: url(background.svg);
+    background: url(background.jpg);
     background-size: cover;
 }
 
@@ -16,7 +17,8 @@ body {
 
 .header {
     width: 100%;
-    height: 40vh;
+    height: 100vh;
+    background: url(wave.svg);
 }
 
 .nav-container {
@@ -32,7 +34,7 @@ nav {
 
 .nav-container h1 {
     width: 50px;
-    display: none;
+    display: block;
 }
 
 .nav-container ul li {
@@ -43,7 +45,7 @@ nav {
 
 .nav-container ul li a {
     text-decoration: none;
-    color: #080418;
+    color: #fff;
     font-size: 1rem;
     position: relative;
 }
@@ -76,6 +78,7 @@ nav {
 .headerTxt h2 {
     font-size: 4rem;
     margin-top: 10px;
+    color: #fff;
 }
 
 .headerTxt h2 span {
@@ -86,7 +89,8 @@ nav {
 
 .about {
     padding: 80px 0;
-    color: #342a23;
+    color: #fff;
+    background: url(shapes.svg);
 }
 
 .about .row {
@@ -168,6 +172,7 @@ nav {
     padding: 30px 0;
     border-style: inset;
     height: 80vh;
+    color: #fff;
 }
 
 .skills .sub-tittle {
@@ -269,6 +274,10 @@ nav {
     height: 100%;
 }
 
+.layer i {
+    color: #110222;
+}
+
 
 .layer h3 {
     font-weight: 500;
@@ -294,7 +303,7 @@ nav {
     text-decoration: none;
     font-weight: 400;
     display: block;
-    color: #111;
+    color: #fff;
     width: fit-content;
     border-radius: 10px;
     margin: 50px auto;
@@ -330,7 +339,7 @@ nav {
     text-decoration: none;
     font-size: 2rem;
     margin-right: 20px;
-    color: #1b0542;
+    color: #fff;
     display: inline-block;
     transition: transform 0.5s;
 }
@@ -365,4 +374,110 @@ nav {
     100% {
         background-position: 0% 50%;
     }
+}
+
+/* Media queries Responsive Website */
+nav .fa-solid {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        height: 50vh;
+    }
+
+    .headerTxt h2 {
+        font-size: 3rem;
+    }
+
+    .headerTxt {
+        font-size: 1rem;
+    }
+
+    nav .fa-solid {
+        display: block;
+        font-size: 2rem;
+        z-index: 2;
+    }
+
+    nav ul {
+        background-color: #992b6f85;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 150px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav .fa-solid.fa-bars {
+        left: 450px;
+        z-index: 0;
+    }
+
+    nav .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    #aboutme {
+        font-weight: 600;
+        font-size: 3rem;
+    }
+
+    .about-column-1,
+    .about-column-2 {
+        flex-basis: 100%;
+    }
+
+    .about-column-1 {
+        margin-bottom: 40px;
+    }
+
+    .skills {
+        padding: 30px 0;
+        border-style: inset;
+        height: 100vh;
+        color: #fff;
+    }
+
+    .skills .sub-tittle {
+        text-align: center;
+        font-weight: 500;
+        font-size: 2rem;
+    }
+
+    .grid {
+        grid-column: span 6;
+        padding: 10px 20px;
+        margin-bottom: 50px;
+    }
+
+    .grid i {
+        font-size: 1.5rem;
+        margin-bottom: 50px;
+    }
+
+    .grid h2 {
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    .project-list .project {
+        position: relative;
+        grid-column: span 12;
+        margin: 30px 50px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
 }
