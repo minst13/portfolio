@@ -112,6 +112,11 @@ nav {
     flex-basis: 60%;
 }
 
+.about-column-2 p {
+    font-size: 1.5rem;
+    padding: 20px 30px;
+}
+
 #aboutme {
     font-weight: 600;
     font-size: 5rem;
@@ -120,6 +125,7 @@ nav {
 .tabs {
     display: flex;
     margin: 20px 0 40px;
+    color: #91cdd8;
 }
 
 .tab-links {
@@ -149,6 +155,7 @@ nav {
 
 .tabContents {
     display: none;
+    font-size: 1.5rem;
     /* Initially hide all tab contents */
 }
 
@@ -243,6 +250,12 @@ nav {
     transition: transoform 0.5s;
 }
 
+.project a {
+    justify-content: center;
+    align-items: center;
+
+}
+
 .project:hover img {
     transform: scale(1.1);
     overflow: hidden;
@@ -313,6 +326,8 @@ nav {
     transition: 0.5s;
 }
 
+
+
 .button:hover {
     background: linear-gradient(-45deg, #f9c901, #f6e000, #985b10, #6b4701);
     background-size: 400% 400%;
@@ -343,6 +358,7 @@ nav {
     display: inline-block;
     transition: transform 0.5s;
 }
+
 
 .socials a:hover {
     color: #992b6f;
@@ -421,6 +437,7 @@ nav .fa-solid {
         left: 450px;
         z-index: 0;
     }
+
 
     nav .fa-solid {
         position: absolute;
