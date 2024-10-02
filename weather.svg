@@ -1,0 +1,18 @@
+<svg width="100%" height="100%" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky background -->
+  <rect width="800" height="800" fill="skyblue" />
+
+  <!-- Sun -->
+  <circle cx="650" cy="100" r="60" fill="yellow" />
+
+  <!-- Clouds -->
+  <g fill="white">
+    <ellipse cx="150" cy="150" rx="100" ry="60" />
+    <ellipse cx="230" cy="150" rx="80" ry="50" />
+    <ellipse cx="200" cy="130" rx="90" ry="60" />
+
+    <ellipse cx="500" cy="200" rx="100" ry="60" />
+    <ellipse cx="580" cy="200" rx="80" ry="50" />
+    <ellipse cx="550" cy="180" rx="90" ry="60" />
+  </g>
+</svg>
